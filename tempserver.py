@@ -10,7 +10,7 @@ app = Flask(__name__)
 def process():
     data = request.get_data()
     uuid = UUID.uuid1()
-    file_name = "temp" + str(id) + ".py"
+    file_name = id + ".py"
 
     with open(file_name, "w") as f:
         f.write(data.decode("utf-8"))
@@ -21,9 +21,9 @@ def process():
         print(console)
         return console, 405
     else:
-        with open(str(id) + ".json", "r") as f:
+        with open(id + ".json", "r") as f:
             output = f.read().encode('utf-8')
-            os.remove(str(id) + ".json")
+            os.remove(id + ".json")
             return output, 200
 
 
