@@ -21,9 +21,9 @@ def process():
         print(console)
         return console, 405
     else:
-        with open(id + ".json", "r") as f:
+        with open(str(id) + ".json", "r") as f:
             output = f.read().encode('utf-8')
-            os.remove("temp" + id + ".json")
+            os.remove(str(id) + ".json")
             return output, 200
 
 
