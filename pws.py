@@ -19,6 +19,7 @@ class World:
 
     def export(self):
         filename, file_extension = os.path.splitext(sys.argv[0])
+        print(filename)
         with open(filename + ".json", "w") as f:
             print(json.dumps(self.world_array.tolist()), file=f)
 
