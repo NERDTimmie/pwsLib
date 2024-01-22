@@ -1,6 +1,8 @@
+import os
 import numpy as np
 import perlin as perlin
 import json
+import sys
 
 
 # World
@@ -16,7 +18,8 @@ class World:
         return self.world_array[x][y][z]
 
     def export(self):
-        with open("output.json", "w") as f:
+        filename, file_extension = os.path.splitext(sys.argv[0])
+        with open(filename + ".json", "w") as f:
             print(json.dumps(self.world_array.tolist()), file=f)
 
 
