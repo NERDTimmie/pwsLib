@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route('/', methods=['POST'])
 def process():
     data = request.get_data()
-    uuid = UUID.uuid1()
+    id = UUID.uuid1().hex
     file_name = str(id) + ".py"
 
     print(file_name)
