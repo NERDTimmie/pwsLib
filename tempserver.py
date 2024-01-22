@@ -10,7 +10,7 @@ def process():
 
     with open("temp.py", "w") as f:
         f.write(data.decode("utf-8"))
-    result = subprocess.Popen(['python', 'temp.py'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    result = subprocess.Popen(['python3', 'temp.py'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     console = result.stdout.read()
 
     if console:
