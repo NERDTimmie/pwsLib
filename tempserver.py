@@ -10,7 +10,9 @@ app = Flask(__name__)
 def process():
     data = request.get_data()
     uuid = UUID.uuid1()
-    file_name = id + ".py"
+    file_name = str(id) + ".py"
+
+    print(file_name)
 
     with open(file_name, "w") as f:
         f.write(data.decode("utf-8"))
