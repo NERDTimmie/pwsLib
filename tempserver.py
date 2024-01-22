@@ -12,8 +12,6 @@ def process():
     id = UUID.uuid1().hex
     file_name = str(id) + ".py"
 
-    print(file_name)
-
     with open(file_name, "w") as f:
         f.write(data.decode("utf-8"))
     result = subprocess.Popen(['python3', file_name], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
