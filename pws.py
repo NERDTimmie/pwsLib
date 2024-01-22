@@ -12,10 +12,10 @@ class World:
         self.world_array = np.zeros((50, 50, 100), np.int8)
 
     def setBlock(self, x, y, z, t):
-        self.world_array[x][y][z] = t
+        self.world_array[x][z][y] = t
 
     def getBlock(self, x, y, z):
-        return self.world_array[x][y][z]
+        return self.world_array[x][z][y]
 
     def export(self):
         filename, file_extension = os.path.splitext(sys.argv[0])
