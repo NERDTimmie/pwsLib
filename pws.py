@@ -24,7 +24,7 @@ class World:
 
 
 def perlinmap():
-    perlin_array = perlin.generate_perlin_noise_2d((160, 160), (5, 5))
+    perlin_array = perlin.generate_perlin_noise_2d((200, 200), (5, 5))
     return perlin_array
 
 
