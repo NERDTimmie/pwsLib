@@ -12,6 +12,7 @@ class World:
         self.world_array = np.zeros((160, 160, 160), np.int8)
 
     def setBlock(self, x, y, z, t):
+        print(str(x) + " " + str(y) + " " + str(z))
         self.world_array[x][z][y] = t
 
     def getBlock(self, x, y, z):
