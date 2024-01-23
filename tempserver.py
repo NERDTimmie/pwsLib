@@ -16,7 +16,7 @@ def process():
         f.write(data.decode("utf-8"))
     result = subprocess.Popen(['python3', file_name], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     console = result.stdout.read()
-    os.remove(file_name)
+#    os.remove(file_name)
     if console:
         print(console)
         return console, 405
