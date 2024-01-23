@@ -9,7 +9,7 @@ import sys
 class World:
 
     def __init__(self):
-        self.world_array = np.zeros((200, 200, 200), np.int8)
+        self.world_array = np.zeros((160, 160, 160), np.int8)
 
     def setBlock(self, x, y, z, t):
         self.world_array[x][z][y] = t
@@ -24,7 +24,7 @@ class World:
 
 
 def perlinmap():
-    perlin_array = perlin.generate_perlin_noise_2d((200, 200), (5, 5))
+    perlin_array = perlin.generate_perlin_noise_2d((160, 160), (5, 5))
     return perlin_array
 
 
